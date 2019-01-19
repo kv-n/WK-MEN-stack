@@ -7,6 +7,7 @@ const dogRouter = express.Router()
 
 //Index Route
 dogRouter.get('/', (req, res) => {
+//everything inside in a controller
 
 });
 
