@@ -3,6 +3,9 @@ const dogRouter = express.Router()
 //lets files know that this file is full of routers
 //method has to have capital R for it to work, acting like a constructor, making a new instance of router
 
+//MODEL DATA
+const Dog = require('../models/dogs')
+
 //7 routes //2 resourceful// 5 are restful
 
 //Index Route

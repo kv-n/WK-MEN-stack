@@ -1,6 +1,9 @@
 /* REQUIRE */
+require('./db/db')
+
 const express = require('express')
 const app = express();
+
 //require router
 const dogsRouter = require('./routers/dogs')
 
