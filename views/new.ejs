@@ -1,0 +1,26 @@
+<%- include('partials/header', {
+    title: 'New Dog Page'
+}) %>
+
+
+
+<main>
+<h1>New Dog Page</h1>
+
+<form action="/dogs" method="POST">
+    name: <input type="text" name="name"><br>
+    breed: <input type="text" name="breed"><br>
+    age: <input  min="0" type="number" name="age"><br>
+    image: <input type="text" name="image"><br>
+</form>
+
+</main>
+
+
+
+
+
+
+
+
+<%- include('partials/footer') %>

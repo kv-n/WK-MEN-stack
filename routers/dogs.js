@@ -16,7 +16,7 @@ dogRouter.get('/', (req, res) => {
 
 //New Route
 dogRouter.get('/new', (req, res) => {
-
+    res.render('new.ejs');
 });
 
 //Create Route (form)
