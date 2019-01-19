@@ -10,7 +10,7 @@ const Dog = require('../models/dogs')
 
 //Index Route
 dogRouter.get('/', (req, res) => {
-//everything inside in a controller
+//everything inside is a controller
 
 });
 
