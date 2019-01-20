@@ -16,6 +16,8 @@ THIS IS HER/HIM!
 <form action="/dogs/<%= dog._id %>?_method=DELETE" method="POST">
 <button type="submit">DELETE THE DOGGO</button>
 </form>
+<a href="/dogs/<%=dog._id%>/edit"><%=dog.name%>'s Edit Page</a>
+<a href="/dogs">ALL DEM DOGS</a>
 
 </main>
 

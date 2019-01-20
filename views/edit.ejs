@@ -1,0 +1,22 @@
+<%- include('partials/header', {
+    title: 'New Dog Page'
+}) %>
+
+
+
+<main>
+<h1>EDIT THIS DOGGO</h1>
+
+<form action="/dogs/<=dog._id%>/edit/?_mothod=PUT" method="POST">
+Name: <input type="text" name="name" value="<%=dog.name%>"><br>
+Breed: <input type="text" name="breed" value="<%=dog.breed%>"><br>
+Age: <input type="text" name="age" value="<%=dog.age%>"><br>
+Image: <input type="text" name="image" value="<%=dog.image%>"><br>
+
+<button type="submit">Edit</button>
+</form>
+
+</main>
+
+<%- include('partials/footer') %>
+
