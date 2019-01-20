@@ -51,11 +51,20 @@ dogRouter.put('/:id', (req, res) => {
 
 //Show Route
 dogRouter.get('/:id', (req, res) => {
-
+    Dog.findById(req.params.id, (err, foundDog) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.render('show.ejs', {
+                dog: foundDog
+            })
+        }
+    })
 });
 
 //Delete Route
 dogRouter.delete('/:id', (req, res) => {
+
 
 });
 

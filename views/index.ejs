@@ -9,10 +9,10 @@
 <ul>
 <% for(let i = 0; i < dogs.length; i++){ %>
 <li>
-<%= dogs[i].name %> is a good doggo!
-and is a <%= dogs[i].breed %>! he/she is <%= dogs[i].age %> years old
-<img src="<%=dogs[i].image%>" alt="<%= dogs[i].name %> is a great doggo">
-
+NAME: <%= dogs[i].name %>
+BREED>: <%= dogs[i].breed %>
+AGE: <%= dogs[i].age %>
+PICTURE:<img src="<%=dogs[i].image%>" alt="<%= dogs[i].name %> is a great doggo">
 
 <%}%>
 

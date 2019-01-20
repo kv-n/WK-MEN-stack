@@ -1,0 +1,17 @@
+<%- include('partials/header', {
+    title: 'New Dog Page'
+}) %>
+
+
+
+<main>
+
+<h1><%=dog.name%></h1>
+
+<%= dog.name %> is a good doggo! and is a <%= dog.breed %>! he/she is <%= dog.age %> years old
+<img src="<%=dogs[i].image%>" alt="<%= dogs[i].name %> is a great doggo">
+<a href = "/dogs">SEE ALL DEM DOGS</a><br>
+
+</main>
+
+<%- include('partials/footer') %>
