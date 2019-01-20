@@ -6,12 +6,20 @@ const dogRouter = express.Router()
 //MODEL DATA
 const Dog = require('../models/dogs')
 
-//7 routes //2 resourceful// 5 are restful
+//7 routes //2 resourceful (rendering a page or form/data payload) // 5 are restful (transfering data from one place to another)
 
 //Index Route
 dogRouter.get('/', (req, res) => {
-//everything inside is a controller
-
+    //everything inside is a controller
+    Dog.find({}, (err, allDogs) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.render('index.ejs', {
+                dogs: allDogs
+            });
+        }
+    })
 });
 
 //New Route
@@ -22,7 +30,7 @@ dogRouter.get('/new', (req, res) => {
 //Create Route (form)
 dogRouter.post('/', (req, res) => {
     Dog.create(req.body, (err, createDog) => {
-        if (err){
+        if (err) {
             res.send(err);
         } else {
             console.log(createDog + ' has been added to the database.');
