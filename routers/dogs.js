@@ -41,20 +41,28 @@ dogRouter.post('/', (req, res) => {
 
 //Edit Route
 dogRouter.get('/:id/edit', (req, res) => {
-Dog.findById(req.params.id, (err, editDog) => {
-    if (err) {
-        res.send(err)
-    } else {
-        console.log(editDog)
-        res.render('edit.ejs', {
-            dog: editDog
-        })
-    }
-})
+    Dog.findById(req.params.id, (err, editDog) => {
+        if (err) {
+            res.send(err)
+        } else {
+            console.log(editDog)
+            res.render('edit.ejs', {
+                dog: editDog
+            })
+        }
+    })
 });
 
 //Update Route
 dogRouter.put('/:id', (req, res) => {
+    Dog.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, edited) => {
+        if (err) {
+            res.send(err)
+        } else {
+            console.log(edited)
+            res.redirect('/dogs');
+        }
+    })
 
 });
 
@@ -75,12 +83,12 @@ dogRouter.get('/:id', (req, res) => {
 dogRouter.delete('/:id', (req, res) => {
     Dog.findOneAndRemove(req.params.id, (err, deletedDog) => {
         if (err) {
-          res.send(err)
+            res.send(err)
         } else {
-          console.log(deletedDog)
-          res.redirect('/dogs');
+            console.log(deletedDog)
+            res.redirect('/dogs');
         }
-      })
+    })
 
 });
 

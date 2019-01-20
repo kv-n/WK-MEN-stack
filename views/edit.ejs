@@ -7,7 +7,7 @@
 <main>
 <h1>EDIT THIS DOGGO</h1>
 
-<form action="/dogs/<=dog._id%>/edit/?_mothod=PUT" method="POST">
+<form action="/dogs/<%=dog._id%>/?_method=PUT" method="POST">
 Name: <input type="text" name="name" value="<%=dog.name%>"><br>
 Breed: <input type="text" name="breed" value="<%=dog.breed%>"><br>
 Age: <input type="text" name="age" value="<%=dog.age%>"><br>
