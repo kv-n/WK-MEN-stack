@@ -64,7 +64,14 @@ dogRouter.get('/:id', (req, res) => {
 
 //Delete Route
 dogRouter.delete('/:id', (req, res) => {
-
+    Dog.findOneAndRemove(req.params.id, (err, deletedDog) => {
+        if (err) {
+          res.send(err)
+        } else {
+          console.log(deletedDog)
+          res.redirect('/dogs');
+        }
+      })
 
 });
 
