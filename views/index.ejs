@@ -9,10 +9,10 @@
 <ul>
 <% for(let i = 0; i < dogs.length; i++){ %>
 <li>
-NAME: <%= dogs[i].name %>
-BREED>: <%= dogs[i].breed %>
-AGE: <%= dogs[i].age %>
-PICTURE:<img src="<%=dogs[i].image%>" alt="<%= dogs[i].name %> is a great doggo">
+NAME: <a href="/dogs/<%=dogs[i]._id%>"><%= dogs[i].name %><br>
+BREED: <%= dogs[i].breed %><br>
+AGE: <%= dogs[i].age %><br>
+PICTURE: <img src="<%=dogs[i].image%>" alt="<%= dogs[i].name %> is a great doggo">
 
 <%}%>
 
