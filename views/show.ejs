@@ -13,6 +13,10 @@ THIS IS HER/HIM!
 <img src="<%=dog.image%>" alt="<%= dog.name %> is a great doggo"><br>
 <a href = "/dogs">SEE ALL DEM DOGS</a><br>
 
+<form action="/dogs/<%= dog._id %>?_method=DELETE" method="POST">
+<button type="submit">DELETE THE DOGGO</button>
+</form>
+
 </main>
 
 <%- include('partials/footer') %>
