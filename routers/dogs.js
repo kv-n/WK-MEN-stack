@@ -21,7 +21,14 @@ dogRouter.get('/new', (req, res) => {
 
 //Create Route (form)
 dogRouter.post('/', (req, res) => {
-
+    Dog.create(req.body, (err, createDog) => {
+        if (err){
+            res.send(err);
+        } else {
+            console.log(createDog + ' has been added to the database.');
+            res.redirect('/dogs');
+        }
+    })
 });
 
 //Edit Route
