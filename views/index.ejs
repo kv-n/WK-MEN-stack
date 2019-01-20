@@ -1,0 +1,23 @@
+<%- include('partials/header', {
+    title: 'New Dog Page'
+}) %>
+
+
+
+<main>
+<h1>ALL DEM DOGS</h1>
+<ul>
+<% for(let i = 0; i < dogs.length; i++){ %>
+<li>
+<%= dogs[i].name %> is a good doggo!
+and is a <%= dogs[i].breed %>! he/she is <%= dogs[i].age %> years old
+<img src="<%=dogs[i].image%>" alt="<%= dogs[i].name %> is a great doggo">
+
+
+<%}%>
+
+
+</main>
+
+<%- include('partials/footer') %>
+
