@@ -11,7 +11,6 @@
 <p><%= dog.name %> is a good doggo! and is a <%= dog.breed %>! he/she is <%= dog.age %> years old.</p>
 THIS IS HER/HIM!
 <img src="<%=dog.image%>" alt="<%= dog.name %> is a great doggo"><br>
-<a href = "/dogs">SEE ALL DEM DOGS</a><br>
 
 <form action="/dogs/<%= dog._id %>?_method=DELETE" method="POST">
 <button type="submit">DELETE THE DOGGO</button>
